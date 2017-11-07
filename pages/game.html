@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Match match game</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../styles/game.css">
+	</head>
+	<body>
+		<div class="popup">
+			<div class="popup-content">
+				<a href="#" class="close">x</a>
+				<h1>You won!</h1>
+				<h2>Attempts: <span class="popup-content__attempts">0</span></h2>
+				<h2>Time: <span class="popup-content__spent-time">0:00</span></h2>
+				<form class="send-name">
+					<label for="email">Send your email if you would know your rank</label>
+					<input type="email" name="name">
+				</form>
+				<div class="loader" hidden></div>
+				<div class="your-rank"></div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="buttons-and-info">
+				<div class="sound">
+					sound <input type="checkbox" checked>
+				</div>
+				<div class="buttons-wrapper">
+					<button class="start-game">START</button>
+					<button class="new-game" hidden>new game</button>
+					<button class="reset-game" hidden>reset</button>
+				</div>
+				<div class="attempts">
+					attempts: <span>0</span>
+				</div>
+				<div class="timer">0:00</div>
+			</div>
+			<div class="gamefield"></div>
+			<fieldset>
+				<legend>Settings</legend>
+				<div class="game-controller">
+					<div class="range">
+						<label for="range">Amount of cards</label>
+						<input type="range" min="12" max="24" value="12" step="6" data-sizing="px" list="rangeList">
+						<datalist id="rangeList">
+							<option value="12" label="12">
+							<option value="18" label="18">
+							<option value="24" label="24">
+						</datalist>
+					</div>
+					<div class="box-color">
+						<label for="color">Card's color</label>
+						<input type="color" name="color" value="#ab6d6d">
+					</div>
+					<button class="game-controller__default-settings">default settings</button>
+				</div>
+			</fieldset>
+		</div>
+		<script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+		<script type="module" src="../scripts/game.js"></script>
+	</body>
+</html>

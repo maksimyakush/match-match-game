@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: "Lato";
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body section {
+    height: 1000px;
+    width: 100%;
+    background: linear-gradient(to right, rgba(244,214,218,1) 0%,rgba(221,91,106,1) 0%,rgba(245,177,185,1) 100%);
+    align-content: center;
+    justify-content: center;
+    transition: transform 2s;
+    overflow: hidden;
+}
+
+/*Typography*/
+h1 {
+    font-size: 90px;
+    color: #ab6d6d;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ab6d6d;
+}
+
+h2 {
+    font-size: 40px;
+    color: #ff00ff;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+p {
+    font-size: 16px;
+    color: orange;
+    text-align: center;
+}
+
+button, a {
+    background-color: #e7e7e7;
+    border: none;
+    color: #ab6d6d;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+a {
+    color: #ff00ff;
+}
+
+/*Main section*/
+.main-content a {
+    height: 150px;
+    width: 150px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: #BDE2E0;
+    border-radius: 50%;
+    border: 15px solid #ff00ff;
+    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.main-content p {
+	margin-bottom: 1rem;
+}
+
+.main-content a:hover {
+    font-weight: normal;
+    border: 12px solid #ff00ff;
+}
+
+.main-content {
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    height: 100vh;
+}
+
+.section__main__inner {
+    z-index: 100;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section__main__inner .main-content__wrapper {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    height: 100vh;
+    background: #fff;
+    opacity: 0.98;
+    overflow: hidden;
+}
+
+/*Section with rules*/
+.how-to-play__item-4 {
+    height: 100vh;
+}
+
+.how-to-play__item-4 a {
+    margin-left: 6rem;
+}
+
+.rule-of-game {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    position: absolute;
+    left: 100px;
+    top: 0;
+    transition: 1s;
+    align-content: center;
+    justify-content: center;
+    padding-right: 300px;
+    grid-template-columns: 400px 400px;
+    transform: scale(0);
+    transition-delay: 0.3s;
+}
+
+.rule-of-game button:hover {
+    color: #e7e7e7;
+    background-color: #ab6d6d;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25), 0 4px 4px rgba(0,0,0,0.22);
+}
+
+.rule-of-game a:hover {
+    color: #e7e7e7;
+    background-color: #ff00ff;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25), 0 4px 4px rgba(0,0,0,0.22);
+}
+
+.rule-of-game p {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.buttons-wrapper {
+    padding: 3rem;
+    display: grid;
+    grid-gap: 1em;
+    grid-column: 1/3;
+    margin-left: 100px;
+    grid-template-columns: repeat(2,minmax(100px,auto));
+    justify-items: center;
+    justify-content: center;
+}
+
+/*Stages*/
+.stages {
+    position: absolute;
+    display: grid;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: white;
+    width: 100px;
+    justify-items: center;
+    align-items: center;
+}
+
+.stages > * {
+    border: 4px solid green;
+    border-radius: 30%;
+    padding: 1rem;
+}
+
+/*Classes for changes*/
+.hidden {
+    display: none;
+    transition: transform 1s;
+}
+
+.animation {
+    transform: scale(1);
+}
+
+/*Media*/
+@media only screen and (max-width: 1120px) {
+    .stages {
+        visibility: hidden;
+    }
+}
